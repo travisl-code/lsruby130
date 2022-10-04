@@ -11,7 +11,7 @@ class TextAnalyzer
     # end
     # accumulator
     file = File.open('sample_text.txt', 'r')
-    yield (text.read) if block_given?
+    yield (file.read) if block_given?
     file.close
   end
 end
